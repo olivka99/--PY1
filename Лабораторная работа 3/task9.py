@@ -7,8 +7,8 @@ money_capital = 0  # количество денег, чтобы прожить 
 
 # TODO Оформить решение
 
-for i in range(1, months + 1):  # прокручиваем все месяцы по 10-й включительно
-    money_capital = money_capital + spend - salary  # разница между тратами и зарплатой / копим подушку безопасности
-    spend = spend + spend * increase  # учитываем рост цен
+for _ in range(1, months + 1):  # прокручиваем все месяцы по 10-й включительно
+    money_capital += spend - salary  # разница между тратами и зарплатой / копим подушку безопасности
+    spend *= spend * increase  # учитываем рост цен
 
 print(round(money_capital))
