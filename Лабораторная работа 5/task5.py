@@ -1,14 +1,17 @@
 import random
 import string
 
-n = 8
 
-
-def get_random_password(n) -> str:
-    allowedChars = string.ascii_letters + string.digits  # TODO написать функцию генерации случайных паролей
-    password = ''.join(random.sample(allowedChars, n))
+ef get_random_password(n=8) -> str:
+    allowed_chars = ascii_letters + digits  # TODO написать функцию генерации случайных паролей
+    if not n:
+        password = ''.join(sample(allowed_chars, 8))
+    else:
+        password = ''.join(sample(allowed_chars, n))
     return password
 
 
-print(get_random_password(15))
-print(get_random_password(3))
+print(get_random_password(9))
+print(get_random_password(7))
+print(get_random_password(20))
+print(get_random_password())
