@@ -1,8 +1,8 @@
-import random
-import string
+from random import sample
+from string import ascii_letters, digits
 
 
-ef get_random_password(n=8) -> str:
+def get_random_password(n=8) -> str:
     allowed_chars = ascii_letters + digits  # TODO написать функцию генерации случайных паролей
     if not n:
         password = ''.join(sample(allowed_chars, 8))
