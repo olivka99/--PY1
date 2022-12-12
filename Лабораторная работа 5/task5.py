@@ -3,11 +3,7 @@ from string import ascii_letters, digits
 
 
 def get_random_password(n=8) -> str:
-    allowed_chars = ascii_letters + digits  # TODO написать функцию генерации случайных паролей
-    if not n:
-        password = ''.join(sample(allowed_chars, 8))
-    else:
-        password = ''.join(sample(allowed_chars, n))
+    password = ''.join(sample(ascii_letters + digits, n))  # TODO написать функцию генерации случайных паролей
     return password
 
 
