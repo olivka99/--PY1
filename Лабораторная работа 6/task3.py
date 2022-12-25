@@ -21,3 +21,4 @@ to_csv_file(OUTPUT_FILE, headers_list, data)  # TODO вызвать функци
 with open(OUTPUT_FILE) as output_f:
     for line in output_f:
         print(line, end="")
+        
