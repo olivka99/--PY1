@@ -1,11 +1,10 @@
 def to_csv_file(filename, headers, rows, delimiter=",", new_line="\n"):   # TODO реализовать функцию to_csv_file
-    f = open(filename, 'w')
-    f.write(delimiter.join(headers)+new_line)
-    for row in rows:
-        f.write(delimiter.join(row)+new_line)
-    f.close()
-    f = open(filename, 'r')
-    return f.read()
+    with open(filename, 'w') as f:
+        f.write(delimiter.join(headers)+new_line)
+        for row in rows:
+            f.write(delimiter.join(row)+new_line)
+    with open(filename, 'r') as f:
+        return f.read()
 
 
 OUTPUT_FILE = "output.csv"
@@ -21,4 +20,3 @@ to_csv_file(OUTPUT_FILE, headers_list, data)  # TODO вызвать функци
 with open(OUTPUT_FILE) as output_f:
     for line in output_f:
         print(line, end="")
-        
