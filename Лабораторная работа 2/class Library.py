@@ -34,7 +34,7 @@ class Library():
             next_id = last_book['id'] + 1
             return next_id
 
-    def get_index_by_book_id(id_:Book):
+    def get_index_by_book_id(id_:Book) -> int:
         if id_ != None:
             return id
         if id_== None:
