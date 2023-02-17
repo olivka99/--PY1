@@ -17,7 +17,7 @@ BOOKS_DATABASE = [
 # TODO написать класс Book
 class Book:
     def __init__(self, id_: int, name: int, pages: int):
-        self.id_ = id_
+        self.id = id_
         self.name = name
         self.pages = pages
 
@@ -26,12 +26,13 @@ class Library():
     def __init__(books: dict):
         books: Optional[str]
 
-    def get_next_book_id(id_:Book):
+    def get_next_book_id(id_:Book) -> int:
         if Book == None:
             return 1
-        #if Book != None:
-            #id_next = id_ + 1
-           # return id_next
+        if Book != None:
+            last_book = self.books[-1]
+            next_id = last_book['id'] + 1
+            return next_id
 
     def get_index_by_book_id(id_:Book):
         if id_ != None:
